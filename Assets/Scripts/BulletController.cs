@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour {
 
-    [SerializeField]
-    float initialVelocity = 6;
+  [SerializeField]
+  float initialVelocity = 6;
 
-    [SerializeField]
-    float lifeTime = 4;
+  [SerializeField]
+  float lifeTime = 4;
 
 	void Start ()
-    {
-        Rigidbody rigidbody = GetComponent<Rigidbody>();
-        rigidbody.velocity = transform.forward * initialVelocity;
+  {
+    Rigidbody rigidbody = GetComponent<Rigidbody>();
+    rigidbody.velocity = transform.forward * initialVelocity;
 
-        Destroy(this.gameObject, lifeTime);
+    Destroy(this.gameObject, lifeTime);
 	}
 }
